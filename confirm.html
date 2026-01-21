@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="confirm.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <input type="checkbox" id="menu-toggle">
+
+  <label for="menu-toggle" class="menu-botao">Menu</label>
+
+  <nav>
+    <ul class="menu">
+      <li><a class="botao" href="index.html"> Início </a></li>
+      <li><a class="botao" href="local.html">Local</a></li>
+      <li><a class="botao" href="confirm.html">Confirmar</a></li>
+      <li><a class="botao" href="traje.html">Traje da festa</a></li>
+      <li><a class="botao" href="presentes.html">Sugestões de presentes</a></li>
+    </ul>
+  </nav>
+
+  <h1>Confirmar presença!</h1>
+
+  <form action="https://formsubmit.co/niver.hillary@gmail.com" method="POST">
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="text" name="número" placeholder="Número de Whatsapp">
+    <input type="hidden" name="next" value="index.html">
+
+    <select name="presenca" required>
+      <option value="">Você irá?</option>
+      <option value="Sim">Sim, estarei presente</option>
+      <option value="Não">Não poderei ir</option>
+    </select>
+
+    <button type="submit">Confirmar presença</button>
+  </form>
+  <div id="overlay" class="overlay">
+  <div class="mensagem">
+    Presença confirmada! <br>
+    Obrigada por responder ✨
+  </div>
+</div>
+<script>
+const form = document.querySelector("form");
+const overlay = document.getElementById("overlay");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); // impede o envio imediato
+
+  overlay.style.display = "flex";
+
+  setTimeout(() => {
+    overlay.style.display = "none";
+    form.submit(); // envia de verdade
+  }, 3000); // 3 segundos
+});
+</script>
+
+
+</body>
+</html>

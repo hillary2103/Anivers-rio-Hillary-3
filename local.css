@@ -1,0 +1,107 @@
+body{
+color: #000;
+background-image: url(https://i.pinimg.com/1200x/63/a7/cd/63a7cdcc953166a3305cb1235dfb8ca0.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-color: rgba(0,0,0,0.6);
+background-blend-mode: darken;
+min-height: 100dvh;
+}
+ul{
+display: flex;
+justify-content: center;
+list-style: none;
+gap: 7dvh;
+align-items: center;
+padding: 10dvh;
+font-family: "Great Vibes", cursive;
+}
+h1{
+    font-size: 15dvh;
+    font-family: "Great Vibes", cursive;
+    text-align: center;
+    margin-top: 10dvh;
+    background: -webkit-linear-gradient(#fff7af, #9cc8ec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.botao{
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(#57a8a8,#48586f);
+    color: #fff7af;
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    box-shadow: none;
+    transition: 0.3s ease;
+    font-size: 6dvh;
+    margin-top: 3dvh;
+}
+.botao:hover{
+    box-shadow: none;
+    transform: translateY(-1dvh);
+}
+#menu-toggle{
+    display: none;
+}
+
+.menu-botao{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+
+    padding: 12px 24px;
+    font-family: "Great Vibes", cursive;
+    font-size: 4dvh;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(#57a8a8, #455a77);
+    color: #fff7af;
+    cursor: pointer;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 300px;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    padding-top: 120px;
+    transition: 0.4s ease;
+    z-index: 1;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+#menu-toggle:checked + .menu-botao + nav{
+    left: 0;
+}
+
+.botao{
+    display: inline-block;
+    padding: 14px 28px;
+    font-family: "Great Vibes", cursive;
+    font-size: 4dvh;
+    border-radius: 30px;
+    background: linear-gradient(#57a8a8, #455a77);
+    color: #fff7af;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.botao:hover{
+    transform: translateX(6px);
+}
